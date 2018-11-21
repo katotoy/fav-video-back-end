@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FavVideos REST Api</title>
+ 
+    <style>
+        body{
+            font-family: serif, "Times New Roman", Times;
+        }
+        table, tr, td{
+            border: 1px solid;
+        }
+    </style>
+    </head>
+  <body>
+<p>This is a REST web service API for my FavVideo web-app (<a href="https://gentle-wave-56839.herokuapp.com">https://gentle-wave-56839.herokuapp.com</a>)</p>
+<table>
+<tbody>
+<tr><td>Main Components</td></tr>
+<tr><td>Core - Python/Flask</td></tr>
+<tr><td>Persistence - PostgresSQL</td></tr>
+<tr><td>Object Relational Mapping (ORM) - Pony ORM</td></tr>
+<tr><td>Authentication/Authorization - JWT, jwt-extend</td></tr>
+<tr><td>Pasword Hashing - passlib</td></tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Available Endpoints:</p>
+<table style="width: 680px;">
+<tbody>
+<tr>
+<td style="width: 250px;">Endpoint</td>
+<td style="width: 10px;">Method</td>
+<td style="width: 200px;">Parameters</td>
+<td style="width: 400px;">Description</td>
+</tr>
+<tr>
+<td >/user</td>
+<td >GET</td>
+<td >JWT required</td>
+<td >returns the member's profile</td>
+</tr>
+<tr>
+<td >&nbsp;</td>
+<td >POST</td>
+<td >email, call_sign, password</td>
+<td >creates a new member profile</td>
+</tr>
+<tr>
+<td >/login</td>
+<td >POST</td>
+<td >email, password</td>
+<td >verifies if the given credentials is authorized to access the system</td>
+</tr>
+<tr>
+<td style="width: 205.8px;">/videos/&lt;video_id&gt; or /videos</td>
+<td style="width: 10px;">DELETE</td>
+<td style="width: 146px;">video_id, JWT required</td>
+<td >deletes a video with the given video_id</td>
+</tr>
+<tr>
+<td style="width: 205.8px;">&nbsp;</td>
+<td style="width: 10px;">GET</td>
+<td style="width: 146px;">video_id</td>
+<td style="width: 317px;">retuns the information of the video with the given video_id</td>
+</tr>
+<tr>
+<td style="width: 205.8px;">&nbsp;</td>
+<td style="width: 10px;">POST</td>
+<td style="width: 146px;">JWT required, url, title, description</td>
+<td style="width: 317px;">creates a new video record</td>
+</tr>
+<tr>
+<td style="width: 205.8px;">/user-videos</td>
+<td style="width: 10px;">GET</td>
+<td style="width: 146px;">JWT required</td>
+<td style="width: 317px;">returns the list of videos posted by a particular member</td>
+</tr>
+<tr>
+<td style="width: 205.8px;">/gallery</td>
+<td style="width: 10px;">GET</td>
+<td style="width: 146px;">&nbsp;</td>
+<td style="width: 317px;">returns all the list of videos available from the database</td>
+</tr>
+<tr>
+<td style="width: 205.8px;">/like-videos/&lt;video_id&gt;</td>
+<td style="width: 10px;">GET</td>
+<td style="width: 146px;">video_id, JWT required</td>
+<td style="width: 317px;">returns a boolean value if the logged user liked the viewed video or not</td>
+</tr>
+<tr>
+<td style="width: 205.8px;">&nbsp;</td>
+<td style="width: 10px;">POST</td>
+<td style="width: 146px;">video_id, JWT required</td>
+<td style="width: 317px;">toggles the value on the database reflecting if the user liked or not a video</td>
+</tr>
+<tr>
+<td style="width: 205.8px;">/video-like-count/&lt;video_id&gt;</td>
+<td style="width: 10px;">GET</td>
+<td style="width: 146px;">video_id</td>
+<td style="width: 317px;">returns the number of likes for the given video_id</td>
+</tr>
+<tr>
+<td style="width: 205.8px;">/user-videos-like-count</td>
+<td style="width: 10px;">GET</td>
+<td style="width: 146px;">member_id</td>
+<td style="width: 317px;">returns a summary of the videos posted by the given member_id with the total number of likes per video</td>
+</tr>
+</tbody>
+</table>
+<p>*JWT required means that the current logged user (member_id) will be determined by the security header passed during request</p>
+  </body>
+</html>
+</html>
