@@ -11,4 +11,4 @@ PyJWT==1.7.1
 pytz==2020.4
 six==1.15.0
 Werkzeug==1.0.1
-gunicorn==0.14.2
+gunicorn==19.8.1
