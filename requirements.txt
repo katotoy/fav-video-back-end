@@ -80,7 +80,6 @@ websocket-client==0.57.0
 websocket-server==0.4
 websockets==8.1
 Werkzeug==1.0.1
-windows-curses==2.1.0
 wrapt==1.12.1
 yarl==1.6.0
 zope.interface==5.1.0
