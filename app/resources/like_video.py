@@ -7,7 +7,6 @@ import json
 class LikeVideo(Resource):
 
     @staticmethod
-    @jwt_required
     def get(video_id):
         print('Checking if member liked the video')
 
