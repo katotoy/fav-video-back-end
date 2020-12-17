@@ -1,5 +1,6 @@
 aiohttp==3.6.2
 aniso8601==8.1.0
+appdirs==1.4.4
 astroid==2.4.1
 async-timeout==3.0.1
 attrs==20.2.0
@@ -14,6 +15,8 @@ constantly==15.1.0
 crypto==1.4.1
 cryptography==3.1
 cssselect==1.1.0
+distlib==0.3.1
+filelock==3.0.12
 Flask==1.1.2
 Flask-JWT-Extended==3.25.0
 Flask-RESTful==0.3.8
@@ -73,6 +76,8 @@ toml==0.10.1
 tqdm==4.47.0
 Twisted==20.3.0
 urllib3==1.25.9
+virtualenv==20.2.2
+virtualenvwrapper-win==1.2.6
 Vocabulary==1.0.4
 w3lib==1.22.0
 webencodings==0.5.1
@@ -80,6 +85,7 @@ websocket-client==0.57.0
 websocket-server==0.4
 websockets==8.1
 Werkzeug==1.0.1
+windows-curses==2.1.0
 wrapt==1.12.1
 yarl==1.6.0
 zope.interface==5.1.0
